@@ -55,7 +55,7 @@ export default function About() {
               <ShieldCheck size={24} />
             </div>
             <div>
-              <h3 className="text-lg font-bold">A product of Polosys Technologies.</h3>
+              <h3 className="text-lg font-bold">A product for Distribution and Route sales.</h3>
               <p className="text-sm text-slate-500">Reliable. Scalable. Innovative Engineering.</p>
             </div>
           </div>
