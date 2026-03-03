@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/src/lib/utils';
-import { Menu, X } from 'lucide-react';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { cn } from "@/src/lib/utils";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Product', path: '/features' },
-  { name: 'Pricing', path: '/pricing' },
-  { name: 'About', path: '/about' },
-  { name: 'Contact', path: '/contact' },
+  { name: "Home", path: "/" },
+  { name: "Product", path: "/features" },
+  { name: "Pricing", path: "/pricing" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export default function Header() {
@@ -33,7 +33,7 @@ export default function Header() {
               to={item.path}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-[#0407ae]",
-                location.pathname === item.path ? "text-[#0407ae] font-bold" : "text-slate-600"
+                location.pathname === item.path ? "text-[#0407ae] font-bold" : "text-slate-600",
               )}
             >
               {item.name}
@@ -42,18 +42,15 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:block text-sm font-semibold text-slate-700 hover:text-[#0407ae] px-4">
+          {/* <button className="hidden md:block text-sm font-semibold text-slate-700 hover:text-[#0407ae] px-4">
             Login
-          </button>
-          <button className="bg-[#0407ae] text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-all shadow-lg shadow-[#0407ae]/20">
+          </button> */}
+          {/* <button className="bg-[#0407ae] text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-all shadow-lg shadow-[#0407ae]/20">
             Get Started
-          </button>
-          
+          </button> */}
+
           {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2 text-slate-600"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button className="md:hidden p-2 text-slate-600" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -68,16 +65,14 @@ export default function Header() {
               to={item.path}
               className={cn(
                 "block text-base font-medium transition-colors hover:text-[#0407ae]",
-                location.pathname === item.path ? "text-[#0407ae] font-bold" : "text-slate-600"
+                location.pathname === item.path ? "text-[#0407ae] font-bold" : "text-slate-600",
               )}
               onClick={() => setIsOpen(false)}
             >
               {item.name}
             </Link>
           ))}
-          <button className="w-full text-left text-base font-medium text-slate-600 py-2">
-            Login
-          </button>
+          <button className="w-full text-left text-base font-medium text-slate-600 py-2">Login</button>
         </div>
       )}
     </header>
