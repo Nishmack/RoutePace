@@ -2,7 +2,7 @@
 // Central API configuration for RoutePace frontend
 
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
-
+console.log("API URL:", import.meta.env.VITE_API_URL);
 /**
  * Core fetch wrapper with auth headers and error handling
  */
