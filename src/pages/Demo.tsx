@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CreditCard, MapPin, Headset, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { demoAPI } from "../services/api"; // ← adjust path as needed
+import { demoAPI } from "../services/api";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface FormData {
