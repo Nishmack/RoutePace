@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
   return {
     plugins: [react(), tailwindcss()],
-    base: process.env.VITE_BASE_PATH || "/RoutePace",
+    base: process.env.VERCEL === "1" ? "/" : (process.env.VITE_BASE_PATH || "/RoutePace"),
     define: {
       "process.env.GEMINI_API_KEY": JSON.stringify(env.GEMINI_API_KEY),
     },
