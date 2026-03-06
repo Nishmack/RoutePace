@@ -21,7 +21,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/RoutePace">
       <ScrollToTop />
       <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-[#0407ae]/10 selection:text-[#0407ae]">
         <Header />
